@@ -1,13 +1,13 @@
 ---
 layout:     post
-title:      "Hello 2015"
+title:      "test"
 subtitle:   " \"Hello World, Hello Blog\""
-date:       2015-01-29 12:00:00
-author:     "Hux"
+date:       
+author:     "ZK"
 header-img: "img/post-bg-2015.jpg"
 catalog: true
 tags:
-    - Meta
+    - java
 ---
 
 > “Yeah It's on. ”
