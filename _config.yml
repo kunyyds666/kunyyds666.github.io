@@ -1,31 +1,30 @@
-# Site settings
-title: kun 博客
-SEOTitle: kunyyds | KUN Blog
-header-img: img/home-bg.jpg
-email: kunyyds666@gmail.com
-description: "gogogo"
-keyword: "github,java,后端"
-url: "https://kunyyds666.github.io" # your host, for absolute URL
-baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
+# 网站设置
+title: kun 博客                      # 网站标题
+SEOTitle: kunyyds | KUN Blog        # 用于 SEO 的标题
+header-img: img/home-bg.jpg         # 首页顶部背景图
+email: kunyyds666@gmail.com         # 联系邮箱
+description: "gogogo"               # 网站描述
+keyword: "github,java,后端"         # 关键词，用于 SEO
+url: "https://kunyyds666.github.io" # 网站的完整域名（用于生成绝对路径）
+baseurl: ""                         # 如果博客部署在子路径下，如 'host/blog'，这里填 '/blog'
 
-# Publish posts or collection documents with a future date.
+# 是否允许发布未来时间的文章
 future: true
 
-# SNS settings
+# 社交网络设置
 RSS: false
-weibo_username: 
-zhihu_username: 554669
-github_username: kunyyds666
-twitter_username: kunyyds666
-facebook_username: kunyyds666  
-linkedin_username:  kunyyds666
+weibo_username:                     # 微博用户名（为空）
+zhihu_username: 554669             # 知乎用户名或 ID
+github_username: kunyyds666        # GitHub 用户名
+twitter_username: kunyyds666       # Twitter 用户名
+facebook_username: kunyyds666      # Facebook 用户名
+linkedin_username: kunyyds666      # LinkedIn 用户名
 
-# Build settings
-# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
-highlighter: rouge
-permalink: pretty
-paginate: 10
-exclude:
+# 构建设置
+highlighter: rouge                 # 代码高亮使用 Rouge（GitHub Pages 推荐）
+permalink: pretty                  # 美化 URL 格式，如 /2025/04/23/title/
+paginate: 10                       # 每页显示文章数
+exclude:                           # 构建时忽略的文件或目录
   [
     "less",
     "node_modules",
@@ -34,69 +33,58 @@ exclude:
     "README.md",
     "README.zh.md",
   ]
-anchorjs: true # if you want to customize anchor. check out line:181 of `post.html`
-# If you have timezone issue (e.g. #68) in China, uncomment to use this:
+anchorjs: true                     # 是否启用 anchor.js，为标题添加锚点链接
+
+# 如果你在中国遇到时区问题，取消下面一行注释：
 #timezone: CN
 
-# Gems
-# from PR#40, to support local preview for Jekyll 3.0
-# make sure you have this gem installed
-# `$ gem install jekyll-paginate`
-plugins: [jekyll-paginate]
+# 插件配置（旧版叫 gems）
+plugins: [jekyll-paginate]         # 分页插件，需要预先安装：gem install jekyll-paginate
 
-# Markdown settings
-# replace redcarpet to kramdown,
-# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
-# document: http://jekyllrb.com/docs/configuration/#kramdown
-markdown: kramdown
+# Markdown 设置
+markdown: kramdown                 # 使用 kramdown 解析 Markdown
 kramdown:
-  input: GFM # use Github Flavored Markdown !important
+  input: GFM                       # 使用 GitHub Flavored Markdown
   syntax_highlighter_opts:
     span:
-      line_numbers: false
+      line_numbers: false          # 行内代码不显示行号
     block:
-      line_numbers: true
-      start_line: 1
+      line_numbers: true           # 块级代码显示行号
+      start_line: 1                # 从第 1 行开始编号
 
-# Disqus settings
+# Disqus 评论配置
 disqus_username: kunyyds
 
-# Netease settings
-netease_comment: false
+# 网易云评论配置
+netease_comment: false             # 是否启用网易云评论（关闭）
 
-# Analytics settings
-# Baidu Analytics
+# 网站分析配置
+# 百度统计（可填写百度提供的追踪 ID）
 # ba_track_id: [your track id]
 
-# Google Analytics
-ga_track_id: "UA-49627206-1" # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
+# Google Analytics 配置
+# ga_track_id: "UA-49627206-1"    # 谷歌分析追踪 ID
+# ga_domain: huangxuan.me         # 绑定的域名
 
-# Sidebar settings
-sidebar: true # whether or not using Sidebar.
-sidebar-about-description: "要做一个有 swag 的程序员 <br> React Team @ Meta"
-sidebar-avatar: https://github.com/Huxpro.png # use absolute URL, seeing it's used in both `/` and `/about/`
+# 侧边栏配置
+sidebar: true                      # 是否启用侧边栏
+sidebar-about-description: "自我介绍" # 侧边栏简介
+sidebar-avatar:                    # 头像（使用绝对路径）
 
-# Featured Tags
-featured-tags: true # whether or not using Feature-Tags
-featured-condition-size: 1 # A tag will be featured if the size of it is more than this condition value
+# 标签模块
+featured-tags: true                # 是否启用标签模块
+featured-condition-size: 1        # 标签出现次数大于该值才显示为“特色标签”
 
-# Progressive Web Apps
-chrome-tab-theme-color: "#000000"
-service-worker: true
+# 渐进式 Web 应用（PWA）
+chrome-tab-theme-color: "#000000" # Chrome 标签页颜色
+service-worker: true              # 是否启用 Service Worker（PWA 功能）
 
-# MathJax rendering for layout:page (e.g. post preview)
-page-mathjax: false
+# 数学公式渲染（MathJax）
+page-mathjax: false               # 是否启用 MathJax（用于公式渲染）
 
-# Friends
+# 友情链接
 friends:
   [
-    { title: "乱序（Midare）", href: "http://mida.re/" },
-    { title: "Ebn Zhang", href: "https://ebnbin.dev/" },
-    { title: "Kun Qian", href: "http://kunq.me" },
-    { title: "Sherry Woo", href: "https://sherrywoo.me/" },
-    { title: "SmdCn", href: "http://blog.smdcn.net" },
-    { title: "JiyinYiyong", href: "http://tiye.me/" },
-    { title: "DHong Say", href: "http://dhong.co" },
-    { title: "尹峰以为", href: "http://ingf.github.io/" },
+   # { title: "乱序（Midare）", href: "http://mida.re/" },
+  
   ]
